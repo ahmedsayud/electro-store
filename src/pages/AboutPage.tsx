@@ -17,7 +17,7 @@ const AboutPage: React.FC = () => {
           <div className="absolute inset-0 z-20 flex items-center">
             <div className="container-custom mx-auto">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">من نحن</h1>
-              <p className="text-gray-200 max-w-lg">
+              <p className="text-white max-w-lg">
                 تعرف على قصتنا وقيمنا وكيف نعمل على توفير أفضل المنتجات التقنية لعملائنا
               </p>
             </div>
@@ -147,7 +147,7 @@ const AboutPage: React.FC = () => {
                 />
               </div>
               <h4 className="text-xl font-bold mb-1">سارة عبدالله</h4>
-              <p className="text-techTheme-secondary mb-2">مديرة المنتجات</p>
+              <p className="text-techTheme-primary mb-2">مديرة المنتجات</p>
               <p className="text-gray-400 text-sm">
                 متخصصة في اختيار أفضل المنتجات التقنية وضمان جودتها قبل عرضها للبيع.
               </p>

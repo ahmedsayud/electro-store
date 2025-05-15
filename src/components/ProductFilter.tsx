@@ -91,7 +91,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({ onFilterChange, className
   };
 
   return (
-    <div className={`bg-techTheme-muted p-5 rounded-lg ${className}`}>
+    <div className={`bg-techTheme-muted p-5 rounded-lg ${className}overflow-y-auto sticky `}>
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-bold">الفلاتر</h3>
         <button
@@ -107,7 +107,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({ onFilterChange, className
         <h4 className="font-bold mb-3">الفئات</h4>
         <div className="space-y-2">
           {categories.map(category => (
-            <label key={category} className="flex items-center cursor-pointer">
+            <label key={category} className="flex items-center cursor-pointer gap-2 h-8">
               <input
                 type="checkbox"
                 checked={filters.categories.includes(category)}
@@ -126,7 +126,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({ onFilterChange, className
         <h4 className="font-bold mb-3">العلامات التجارية</h4>
         <div className="space-y-2">
           {brands.map(brand => (
-            <label key={brand} className="flex items-center cursor-pointer">
+            <label key={brand} className="flex items-center cursor-pointer gap-2 h-8">
               <input
                 type="checkbox"
                 checked={filters.brands.includes(brand)}
@@ -145,7 +145,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({ onFilterChange, className
         <h4 className="font-bold mb-3">نطاق السعر</h4>
         <div className="space-y-2">
           {priceRanges.map((range, index) => (
-            <label key={index} className="flex items-center cursor-pointer">
+            <label key={index} className="flex items-center cursor-pointer gap-2 h-8">
               <input
                 type="radio"
                 checked={filters.priceRange[0] === range.min && filters.priceRange[1] === range.max}
@@ -189,7 +189,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({ onFilterChange, className
 
       {/* Availability Filter */}
       <div>
-        <label className="flex items-center cursor-pointer">
+        <label className="flex items-center cursor-pointer gap-2 h-8">
           <input
             type="checkbox"
             checked={filters.inStock}

@@ -114,3 +114,29 @@
     @apply block absolute bottom-0 right-0 w-16 h-1 bg-techTheme-primary mt-1;
   }
 }
+/* .loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 18px;
+  clip-path: inset(0 3ch 0 0);
+  animation: l4 1s steps(4) infinite;
+}
+.loader::before {
+  content:"";
+}
+@keyframes l4 {to{clip-path: inset(0 -1ch 0 0)}} */
+@keyframes flash {
+  0%, 20% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.dot-flash {
+  animation: flash 1.4s infinite;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
